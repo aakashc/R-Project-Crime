@@ -1,0 +1,118 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart1fdc7255e90' class='rChart nvd3'></div>  
+    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart1fdc7255e90()
+    });
+    function drawchart1fdc7255e90(){  
+      var opts = {
+ "dom": "chart1fdc7255e90",
+"width":    800,
+"height":    400,
+"x": "state",
+"y": "maxChange",
+"group": "variable",
+"type": "multiBarChart",
+"id": "chart1fdc7255e90" 
+},
+        data = [
+ {
+ "variable": "2007",
+"maxChange":          29.33,
+"state": "West Bengal" 
+},
+{
+ "variable": "2008",
+"maxChange":           62.5,
+"state": "Goa" 
+},
+{
+ "variable": "2009",
+"maxChange":          25.38,
+"state": "Goa" 
+},
+{
+ "variable": "2010",
+"maxChange":          18.88,
+"state": "Assam" 
+},
+{
+ "variable": "2011",
+"maxChange":          30.95,
+"state": "Sikkim" 
+},
+{
+ "variable": "2012",
+"maxChange":          61.29,
+"state": "Goa" 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+  </body>
+</html>

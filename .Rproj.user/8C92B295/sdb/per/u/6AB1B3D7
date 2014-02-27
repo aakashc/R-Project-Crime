@@ -1,0 +1,16 @@
+{
+    "contents" : "install.packages('RColorBrewer')",
+    "created" : 1386286650474.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "677446196",
+    "id" : "6AB1B3D7",
+    "lastKnownWriteTime" : 13229740524830817,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

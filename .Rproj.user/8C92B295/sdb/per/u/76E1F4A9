@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\n",
+    "created" : 1386366186444.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3844689873",
+    "id" : "76E1F4A9",
+    "lastKnownWriteTime" : 7886488245871407220,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Crime Against Women In India</title>
+    <link rel='stylesheet' href='crime.css' type='text/css'>
+</head>
+<body>
+<div id="container">
+<div id='header'>
+    <h1>Crime Against Women in India</h1>
+    <h5>Presented By: Aakash Bikram Chand<img src='aakash.jpg' alt='Aakash' height='50' width='50' style='background-repeat: no-repeat'></h5>
+</div>
+<div id='content'>
+    
+    <hr>
+<h2>Introduction:</h2>
+<p>In the recent years, crime against women in India particularly rape incidents have been reported extensively in the Indian media. These crimes are national phenomenon and are no longer rural India issues. Centuries have come and centuries have gone but the difficulty of women is not likely to change. Time has helplessly watched women suffering in the form of discrimination oppression exploitation degradation aggression humiliation. In Indian society woman occupies a vital position and venerable place. The Vedas glorified women as the mother the creator one who gives life and worshiped her as a ‘Devi or Goddess. But their glorification was rather mythical for at the same time in India women finds totally suppressed and dominated in a patriarchal society. Male violence against women is a worldwide phenomenon. There are various forms of crime against women. Sometimes it is even before birth some times in the adulthood and other phrases of life. Violence against women both inside and outside of their home has been a crucial issue in the contemporary Indian society. Women in India constitute near about half of its population and most of them are grinding under the socio-cultural and religious structures.
+<br> On December 16 2012, a medical student in Delhi was brutally assaulted and gang-raped shading a spotlight on crimes against women in the country. For the first time, there was a furious outrage, emotional outburst as the general public, both men and women demanded safety and protection of women in the country. They were demanding changes to be made, a change in attitude towards women and a change in the demeaning gender laws that have not favored women for decades, plus they wanted a speedy justice to be executed on rapists so that they could be brought to book as soonest. However, many crimes of this nature occur every day in small towns and villages and do not get such attention. Crime is one of the main reasons that hinders women empowerment in India. Gender-based issues are getting worse. Women do not have equal status at home, at work or even in the society.<br>
+<p>The main objectives of this project are to find out:</p>
+<ul>
+    <li>How total number of crimes against women in India have changed over the years at state level.</li>
+    <li>What is the trend for each crime type.</li>
+    <li>How can we rank states/cities based on total crimes/crime type/crime density.</li>
+    <li>Are crimes correlated with state population/literacy rates.</li>
+    <li>Which cities are safe and which are dangerous for women.</li>
+</ul></p>    
+    <h4>This study is carried out for the following crime types against Women:</h4>
+    <div id="navcontainer">
+    <ul id='navlist'>    
+        <li id='active'><a href='#' id='current'>Rape</a></li>
+        <li><a href="#">Kidnapping</a></li>
+        <li><a href="#">Insult</a></li>
+        <li><a href="#">Immoral</a></li>
+        <li><a href="#">Dowry</a></li>
+        <li><a href="#">Dowry deaths</a></li>
+        <li><a href="#">Cruelty</a></li>
+        <li><a href="#">Assault</a></li>
+    </ul>
+    </div>
+    <hr>
+    <p>Data-sets used for the study are:</p>
+    <ul>
+    <li><a href='http://data.gov.in/access-point-download-count?url=http://data.gov.in/sites/default/files/crcCAW.csv&nid=25941'        title='National Crime Records Bureau' target='.blank'>data-set containing crime against women from 2001 to 2012 at State Level were sourced from NCRB</a></li>
+    <ul>
+    For the purpose of this study, following modifications were done:
+    
+    <ul>
+        <li>Union Territories were not considered</li>
+        <li>Data from 2006 to 2012 were only considered</li>
+    </ul>
+    </ul>
+    <li><a href='https://en.wikipedia.org/wiki/States_and_union_territories_of_India' title='Wikipedia' target='.blank'>State population, area and literacy Rate were sourced from Wikipedia</a></li>
+    <li><a href='http://ncrb.nic.in/CD-CII2012/cii-2012/Table%205.2.pdf' title='National Crime Records Bureau' target='.blank'>Incidence of crimes against women for different cities for 2012 were sourced from NCRB</a></li>
+<ul>
+    <li><a href='http://total-pdf-converter.en.softonic.com/' title='Total PDF Converter' target='.blank'>The pdf file was converted to xls using Total PDF Converter</a></li>
+    <ul>
+        <li><a href='../data/city_crime.xls' title='Excel Output' target='.blank'> The excel output</a></li>
+    </ul>
+</ul>
+</ul>
+    <hr>
+<p>Tools used for the study are:</p>
+    <ul>
+    <li>For obtaining/cleaning Data</li>
+    <ul><li>Python/R</li></ul>
+    <li>For Data Transformation</li>
+    <ul><li>R</li></ul>
+    <li>For Data Visualization</li>
+    <ul><li>R packages - plotting2, rCharts, goolgeVis</li></ul>
+    </ul>
+    <hr>
+        <p>R Code developed for this project can be found here</p>
+        <ol>
+            <li><a href='../Python_code/crime.py' title='Python Code to get the data from  the web' target='.blank'>Python Code to get the data from  the web</a></li>
+            <li><a href='../R_code/states.R' title='R Code for states' target='.blank'>R Code for states</a></li>
+            <li><a href='../R_code/AdditionalData.R' title='R Code for additional Data' target='.blank'>R Code for additional Data</a></li>
+            <li><a href='../R_code/cities.R' title='R Code for cities' target='.blank'>R Code for cities</a></li>
+        </ol>
+    <hr>    
+    <p style='font-weight: 700'>The graph shows the Crime Percentage Change each year</p>
+    <p>Query 1: How is crime % changed in each state over the years?</p>
+    <p>Results:</p>
+    <ul>
+        <li>The graph gives the % changes of crimes for each state</li>
+        <li>This interactive bar chart gives the % crime change for each state from 2007 to 2012. Select either a particular year or click on each color to find the % change of crime rates for each state.</li>
+    </ul>
+    <iframe src="../graph/crimePct.html"style="width:1230px; height:500px;"></iframe>
+   <hr>
+    <p style='font-weight: 700'>The graph shows the states with Maximum Crime Rate Increase per year</p>
+    <p>Query 2: Which states have the maximum crime rate increases for each year?</p>
+    <p>Results:</p>
+    <ul>
+        <li>Out of 6 years, Goa, a tiny state appears 3 times. For 2012, crime rate increased to 61.3% in Goa compared to 2011.</li>
+        <li>The highest yearly crime rate increase for any state was in 2008 where it increased to 62.5% in Goa.</li>
+    </ul>
+    <iframe src="../graph/sPlot1.html"style="width:850px; height:420px;"></iframe>
+    <hr>
+    
+    <p style='font-weight: 700'>The graph shows the states with Maximum Crime Rate Decrease per year</p>
+    <p>Query 3: Which states have the maximum crime rate decrease for each year?</p>
+    <p>Results:</p>
+    <ul>
+        <li>If we compare this graph with the above one, we find that crime decrease rate is not as big as crime increase rate, which makes it clear that overall crime rate is increasing.</li>
+    </ul>
+    <iframe src="../graph/sPlot2.html"style="width:850px; height:420px;"></iframe>
+    <hr>
+
+
+    <p style='font-weight: 700'>This interactive graph shows each crime over the period of 7 years</p>
+    <p>Query 4: Have the total number of crimes for each crime type increased or decreased from 2006 to 2012?</p>
+    <p>Results:</p>
+    <ul>
+        <li>Each Crime type has increased over the years with an exception to Immoral which has been decreasing slightly</li>
+        <li>Cruelty has always been the number 1 crime followed by Assault, Kidnapping and Rape.</li>
+    </ul>
+    <iframe src="../graph/AreaTotPlot.html"style="width:600px; height:470px;"></iframe>
+    <hr>
+        
+        
+    <p style='font-weight: 700'>State maps using googleVis for Total Crimes</p>
+    <p>Query 5: Can we group/visualize the states based on Total Crimes for 2012?</p>
+    <p>Results:</p>
+    <ul>
+        <li>The state map colors the states based on total crimes.</li>
+        <li>It shows that West Bengal ranks top of the list and is followed by Andhra Pradesh and Uttar Pradesh.</li>
+    </ul>
+    <iframe src="../graph/google.html"style="width:500px; height:500px;"></iframe>
+    <hr>
+        
+        
+    <p style='font-weight: 700'>Finding the top state for each crime in each year</p>
+    <p>Query 6: Can we find the top states for each crime type and for each year?</p>
+    <p>Results:</p>
+    <ul>
+        <li>Madhya Pradesh is always on top for Rape and Assault.</li>
+        <li>Kidnapping is the biggest crime for Uttar Pradesh.</li>
+        <li>West Bengal tops for Cruelty which is the top crime in India.</li>
+    </ul>
+    <iframe src="../graph/maxCrime-ggplot.png" style="width:1030px; height:547px;"></iframe>
+    <hr>
+        
+        
+        
+    <p style='font-weight: 700'>Correlation Plot</p>
+    <p>Query 7: Can we find the correlation between each crime type?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This graphs shows how 2 crimes are related to each other. The correlation coefficient varies from -1 to +1. A positive value indicates that there is a good chance to find the crimes together.</li>
+        <li>This correlation plot tells us that Rape is closely associated with Cruelty, Dowry Deaths and Kidnapping.</li>
+    </ul>
+    <iframe src="../graph/corrmatplot.html"style="width:1010px; height:490px;"></iframe>
+    <hr>
+        
+        
+    <p style='font-weight: 700'>HeatMap</p>
+    <p>Query 8: Which crime tops in each state?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This can be answered by the Heat map. Values for each crime is rescaled from 0 to 1. Shades of Red is directly proportional to higher in crime numbers.</li>
+         <li>Few states such as West Bengal, Uttar Pradesh, Madhya Pradesh and Andhra Pradesh have more Reds and few other states (North East States) do not have red.</li>
+    </ul>
+    <iframe src="../graph/hmap.html"style="width:900px; height:630px;"></iframe>
+    <hr>
+        
+        
+        
+    <p style='font-weight: 700'>Clustering of States based on Crimes</p>
+    <p>Query 9: Can we classify states based on crime numbers?</p>
+    <p>Results:</p>
+    <ul>
+        <li>There are 4 clusters based on crime incidence. Group 4 are the states where crime levels are low.</li>
+    </ul>
+    <iframe src="../graph/dPlots.html"style="width:700px; height:550px;"></iframe>
+    <hr>
+    
+    
+    <p style='font-weight: 700'>Crime Variables comparison</p>
+    <p>Query 10: Is the crime proportional to state population/area/illiteracy rates?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This graph doesn't quite suggest that.</li>
+    </ul>
+    <iframe src="../graph/variables-ggplot.png"style="width:840px; height:560px;"></iframe>
+    <hr>
+        
+        
+    <p style='font-weight: 700'>Correlation for Crime%, Population%, Area%, Illiteracy%</p>
+    <p>Query 11: What is the correlation coefficient for the crime% vs Population%, Area%, Illiteracy%?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This matrix gives us that answer. As expected, the size of the state has the highest correlation with the crime.</li>
+    </ul>
+    <iframe src="../graph/corerelation.png"style="width:588px; height:423px;"></iframe>    
+    <hr>
+    <p style='font-weight: 700'>Interactive graph - hosted in Shiny Server. <a href='http://aakash.shinyapps.io/shiny/' title='Shiny App' target='.blank'>Shiny App</a></p>
+    <p>Query 12: What are the total counts of each crime in state as well as cities?</p>
+    <p>Results:</p>
+    <ul>
+        <li>You can select either state crimes or city level crimes and find the total crimes for each of them.</li>
+    </ul>
+    <iframe src="http://aakash.shinyapps.io/shiny/"style="width:1250px; height:620px;"></iframe>
+    <hr>
+    <p style='font-weight: 700'>City Ranking By Total Crime Cases</p>
+    <p>Query 13: Can we rank Indian cities based on total number of crimes?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This graph suggests that Delhi records the highest number of crimes against women followed by Bangalore and Kolkata. </li>
+    </ul>
+    <iframe src="../graph/cityRank-cases.png"style="width:1090px; height:650px;"></iframe>    
+    <hr>
+        
+        
+    <p style='font-weight: 700'>City Ranking By Total Crime Density</p>
+    <p>Query 14: Can we rank Indian cities based on crime vs. Women Population density?</p>
+    <p>Results:</p>
+    <ul>
+        <li>This graph gives us the list of cities based on crime density. Vijayawada is the most unsafe while Chennai is the safest city.</li>
+    </ul>
+    <iframe src="../graph/cityRank-density.png"style="width:1090px; height:650px;"></iframe>    
+    <hr>
+    
+    <p style='font-weight: 700'>Top Cities For Each Crime Type</p>
+    <p>Query 15: Which cities are top in the list for each crime types?</p>
+    <p>Results:</p>
+    <ul>
+        <li>Delhi ranks top in 5 out of 8 crime types.</li>
+    </ul>
+    <iframe src="../graph/TopCitiesByCrime.png"style="width:690px; height:570px;"></iframe>    
+    <hr>
+        <p style='font-weight: 700'>I had specifically asked 15 questions from the given data and have arrived at the following conclusion:</p>
+        <ul>
+            <li>Out of <strong>8</strong> crime types, <strong>7</strong> of them are increasing each year.</li>
+            <li>Crime Rate increase is steady over the overs and increase rate is much more than the decrease rate.</li>
+             <li><strong>Madhya Pradesh</strong> which has the large tribal population, tops <strong>rape</strong> and <strong>assault</strong> crimes.</li>
+             <li>Many Indian cities have very high crime rates which makes it unsafe for women.</li>
+             <li><strong>Delhi</strong>, the national capital is the most dangerous city for women based on total crime rates. Delhi ranks top in 5 out of 8 crime types.</li>
+             <p>Generally, what has been happening in India has attracted the attention of the world as a whole, and only strict measures implemented by both the government and external forces can bring the change that women have yearned for. Strong laws should be enacted along with social awareness and women empowerment so that the crime rates can eventually come down and make India a safe place for women.</p> 
+        </ul>
+</div> <!-- content ends -->
+<div id="footer">Copyright © Aakash</div> <!-- footer ends -->
+</div> <!-- container ends -->
+</body>
+</html>

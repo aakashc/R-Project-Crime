@@ -1,0 +1,16 @@
+{
+    "contents" : "runApp('shiny/')",
+    "created" : 1386359637950.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3903296331",
+    "id" : "173ADC24",
+    "lastKnownWriteTime" : 1386359585,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

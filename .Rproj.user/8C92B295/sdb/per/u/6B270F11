@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\nlibrary(shiny)\nrunApp('shinyTry/')\n",
+    "created" : 1386359928832.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3462443846",
+    "id" : "6B270F11",
+    "lastKnownWriteTime" : 1386355468,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

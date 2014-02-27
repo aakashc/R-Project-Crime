@@ -1,0 +1,133 @@
+#container {
+               width: 1280px;
+               margin: 0 auto 0 auto;
+               background-color: #eee;
+               
+}
+#header {
+               outline: 1px solid red;
+               height: 130px;
+               text-align: center;
+               text-decoration: underline;
+               color: brown;
+               padding: 10px;
+               background: url('header.jpg');
+               font-size: 17px;
+               font-style: oblique;
+}
+
+#header h5 {
+               text-align: right;
+               font-style: italic;
+               color: grey;
+}
+
+#content {
+               
+               outline: 1px solid red;
+               float: left;
+               width: 1260px;
+               padding: 10px;
+               background-color: #FFFF99;
+               color: black;
+               font-family: georgia, arial, sans-serif;
+               font-size: 13px;
+               text-align: justify;
+}
+
+hr {
+    height: 5px;
+    color: #ed1d61;
+    background: #ed1d61;
+    border: 3px;
+}
+
+
+
+iframe {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               border-top: #c00 1px dotted;
+               border-right: #c00 2px dotted;
+               border-left: #c00 2px dotted;
+               border-bottom: #c00 4px dotted;
+}
+
+}
+
+#navcontainer
+{
+background: #f0e7d7;
+margin: 0 auto;
+padding: 1em 0 0 0;
+font-family: georgia, serif;
+}
+
+/* to stretch the container div to contain floated list */
+#navcontainer:after
+{
+content: ".";
+display: block;
+line-height: 1px;
+font-size: 1px;
+clear: both;
+}
+
+ul#navlist
+{
+list-style: none;
+padding: 0;
+margin: 0 auto;
+width: 80%;
+font-size: 0.8em;
+}
+
+ul#navlist li
+{
+display: block;
+float: left;
+width: 10%;
+margin: 0;
+padding: 0;
+}
+
+ul#navlist li a
+{
+display: block;
+width: 100%;
+padding: 0.5em;
+border-width: 1px;
+border-color: #ffe #aaab9c #ccc #fff;
+border-style: solid;
+color: #777;
+text-decoration: none;
+background: #f7f2ea;
+}
+
+#navcontainer>ul#navlist li a { width: auto; }
+
+ul#navlist li#active a
+{
+background: #f0e7d7;
+color: #800000;
+}
+
+ul#navlist li a:hover, ul#navlist li#active a:hover
+{
+color: #800000;
+background: transparent;
+border-color: #aaab9c #fff #fff #ccc;
+}
+
+#footer {
+               outline: 1px solid red;
+               clear: both;
+               width: 1270px;
+               padding: 5px;
+               margin: 0;
+               font-size: 11px;
+               font-style: italic;
+               text-align: right;
+               background-color: grey;
+}

@@ -1,0 +1,71 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1000px;
+      height: 450px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart1fdc70ee5d4c' class='rChart polycharts'></div>  
+    
+    <script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart1fdc70ee5d4c",
+"width":   1000,
+"height":    450,
+"layers": [
+ {
+ "x": "Var1",
+"y": "Var2",
+"data": {
+ "Var1": [ "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult", "rape", "kidnapping", "insult", "immoral", "dowry", "dowry_deaths", "cruelty", "assult" ],
+"Var2": [ "rape", "rape", "rape", "rape", "rape", "rape", "rape", "rape", "kidnapping", "kidnapping", "kidnapping", "kidnapping", "kidnapping", "kidnapping", "kidnapping", "kidnapping", "insult", "insult", "insult", "insult", "insult", "insult", "insult", "insult", "immoral", "immoral", "immoral", "immoral", "immoral", "immoral", "immoral", "immoral", "dowry", "dowry", "dowry", "dowry", "dowry", "dowry", "dowry", "dowry", "dowry_deaths", "dowry_deaths", "dowry_deaths", "dowry_deaths", "dowry_deaths", "dowry_deaths", "dowry_deaths", "dowry_deaths", "cruelty", "cruelty", "cruelty", "cruelty", "cruelty", "cruelty", "cruelty", "cruelty", "assult", "assult", "assult", "assult", "assult", "assult", "assult", "assult" ],
+"CorrelationCoefficient": [      1, 0.56896, 0.33025, 0.21608, 0.20869, 0.58656, 0.6572, 0.8491, 0.56896,      1, 0.024485, 0.068966, 0.23188, 0.86652, 0.59073, 0.33975, 0.33025, 0.024485,      1, 0.64961, 0.6007, 0.11405, 0.48905, 0.5787, 0.21608, 0.068966, 0.64961,      1, 0.45115, 0.030533, 0.40014, 0.45787, 0.20869, 0.23188, 0.6007, 0.45115,      1, 0.3901, 0.31164, 0.39747, 0.58656, 0.86652, 0.11405, 0.030533, 0.3901,      1, 0.42156, 0.42579, 0.6572, 0.59073, 0.48905, 0.40014, 0.31164, 0.42156,      1, 0.58796, 0.8491, 0.33975, 0.5787, 0.45787, 0.39747, 0.42579, 0.58796,      1 ] 
+},
+"facet": null,
+"color": "CorrelationCoefficient",
+"type": "tile",
+"height":    600 
+} 
+],
+"facet": [],
+"guides": {
+ "color": {
+ "scale": {
+ "type": "gradient2",
+"lower": "red",
+"middle": "white",
+"upper": "blue",
+"midpoint": 0 
+} 
+},
+"y": {
+ "numticks": 8 
+},
+"x": {
+ "numticks":      8 
+} 
+},
+"coord": [],
+"staggerLabels": true,
+"id": "chart1fdc70ee5d4c" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart1fdc70ee5d4c = polyjs.chart(chartParams);
+</script>
+    
+  </body>
+</html>

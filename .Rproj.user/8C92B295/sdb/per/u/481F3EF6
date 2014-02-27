@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\ndf <- data.frame(name=c('aakash', 'bikram', 'chand'), age=c(21,17,11))\nsave(df,file='df.rda',eval.promises = TRUE)\nload('df.rda')\n\nattach('df.rda')\ndf$age\n\nlibrary(saves)\nsaves(df, ultra.fast=T)\nload('foo.bar')\n\nsave(df, file='df.rda', compress=F, precheck=F)\nsave(df, file='dff.rda')\nload('df.rda')",
+    "created" : 1386781131748.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3166446974",
+    "id" : "481F3EF6",
+    "lastKnownWriteTime" : 1386780732,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

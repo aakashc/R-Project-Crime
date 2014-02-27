@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\nheart <- read.csv('c:/Users//aakash/Desktop/heart.csv')\nstr(heart)\n\nmax(heart$age);min(heart$age)\nmax(heart$rest_bpress);min(heart$rest_bpress)\nmax(heart$max_heart_rate);min(heart$max_heart_rate)\nlevels(heart$chest_pain)\nlevels(heart$blood_sugar)\nlevels(heart$rest_electro)\nheart[which(heart$rest_electro=='?'),]\nheart <- subset(heart, heart$rest_electro!='?')\nany(heart$rest_electro=='?')\nmodel1 <- glm(disease ~ age+chest_pain+rest_bpress+blood_sugar+rest_electro+max_heart_rate+exercice_angina,data=heart,family=\"binomial\")\nsummary(model1)\nlibrary(MASS)\nmodel2 <- stepAIC(model1)\nsummary(model2)\nlibrary(car)\ndurbinWatsonTest(model2)\ncrPlots(model2)\nspreadLevelPlot(model2)\n\nAIC(model1, model2)\nlibrary(relaimpo)\ncalc.relimp(model2, type = c(\"lmg\"), rela = TRUE)",
+    "created" : 1385677558195.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3911607195",
+    "id" : "420C2448",
+    "lastKnownWriteTime" : 13229740524830817,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

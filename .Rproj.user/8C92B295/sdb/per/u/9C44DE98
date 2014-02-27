@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\n\nrunApp('shiny/')\n\nlibrary(shinyapps)\n\nshinyapps::setAccountInfo(name=\"aakash\", token=\"7DA671E6E39024F976D1506E0CAACDCC\", secret=\"TxIA4r9W+4OwL3jvg4tjjw5U5o+JexpQMKCp1OmG\")\n\ndeployApp()\n\n\nlibrary(shiny)",
+    "created" : 1386716254418.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3576693270",
+    "id" : "9C44DE98",
+    "lastKnownWriteTime" : 1386627219,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

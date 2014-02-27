@@ -1,0 +1,492 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.1.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 500px;
+      height: 800px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart1fdc29303232' class='rChart dimple'></div>  
+    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chart1fdc29303232",
+"width":    500,
+"height":    800,
+"x": "state",
+"y": "kmeansdata.cluster",
+"groups": "kmeansdata.cluster",
+"type": "bar",
+"bounds": {
+ "x":     50,
+"y":     10,
+"width":    400,
+"height":    400 
+},
+"id": "chart1fdc29303232" 
+},
+    data = [
+ {
+ "state": "Andhra Pradesh",
+"rape":   1341,
+"kidnapping":   1403,
+"insult":   3714,
+"immoral":    472,
+"dowry":   2511,
+"dowry_deaths":    504,
+"cruelty":  13389,
+"assult":   4816,
+"kmeansdata.cluster": 3 
+},
+{
+ "state": "Arunachal Pradesh",
+"rape":     46,
+"kidnapping":     58,
+"insult":      2,
+"immoral":      1,
+"dowry":      0,
+"dowry_deaths":      1,
+"cruelty":     26,
+"assult":     67,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Assam",
+"rape":   1716,
+"kidnapping":   3360,
+"insult":      5,
+"immoral":     30,
+"dowry":     41,
+"dowry_deaths":    140,
+"cruelty":   6407,
+"assult":   1840,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Bihar",
+"rape":    927,
+"kidnapping":   3789,
+"insult":     37,
+"immoral":     35,
+"dowry":   1353,
+"dowry_deaths":   1275,
+"cruelty":   3686,
+"assult":    118,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Chhattisgarh",
+"rape":   1034,
+"kidnapping":    350,
+"insult":    162,
+"immoral":      5,
+"dowry":     14,
+"dowry_deaths":     81,
+"cruelty":    980,
+"assult":   1601,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Delhi",
+"rape":    706,
+"kidnapping":   2160,
+"insult":    208,
+"immoral":     24,
+"dowry":     15,
+"dowry_deaths":    134,
+"cruelty":   1985,
+"assult":    727,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Goa",
+"rape":     55,
+"kidnapping":     16,
+"insult":     16,
+"immoral":     40,
+"dowry":      0,
+"dowry_deaths":      0,
+"cruelty":     24,
+"assult":     49,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Gujarat",
+"rape":    473,
+"kidnapping":   1527,
+"insult":     93,
+"immoral":     44,
+"dowry":      0,
+"dowry_deaths":     21,
+"cruelty":   6658,
+"assult":    745,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Haryana",
+"rape":    668,
+"kidnapping":    900,
+"insult":    434,
+"immoral":     69,
+"dowry":      9,
+"dowry_deaths":    258,
+"cruelty":   3137,
+"assult":    525,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Himachal Pradesh",
+"rape":    183,
+"kidnapping":    152,
+"insult":     68,
+"immoral":      6,
+"dowry":      0,
+"dowry_deaths":      2,
+"cruelty":    251,
+"assult":    250,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Jammu & Kashmir",
+"rape":    303,
+"kidnapping":   1041,
+"insult":    347,
+"immoral":      3,
+"dowry":      3,
+"dowry_deaths":      8,
+"cruelty":    301,
+"assult":   1322,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Jharkhand",
+"rape":    812,
+"kidnapping":    786,
+"insult":     10,
+"immoral":     12,
+"dowry":   1066,
+"dowry_deaths":    302,
+"cruelty":   1261,
+"assult":    284,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Karnataka",
+"rape":    621,
+"kidnapping":   1070,
+"insult":    100,
+"immoral":    335,
+"dowry":   1328,
+"dowry_deaths":    218,
+"cruelty":   3684,
+"assult":   2978,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Kerala",
+"rape":   1019,
+"kidnapping":    214,
+"insult":    498,
+"immoral":    210,
+"dowry":      3,
+"dowry_deaths":     32,
+"cruelty":   5216,
+"assult":   3735,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Madhya Pradesh",
+"rape":   3425,
+"kidnapping":   1127,
+"insult":    774,
+"immoral":     13,
+"dowry":    101,
+"dowry_deaths":    743,
+"cruelty":   3988,
+"assult":   6655,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Maharashtra",
+"rape":   1839,
+"kidnapping":   1140,
+"insult":   1294,
+"immoral":    366,
+"dowry":     33,
+"dowry_deaths":    329,
+"cruelty":   7415,
+"assult":   3935,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Manipur",
+"rape":     63,
+"kidnapping":    133,
+"insult":      1,
+"immoral":     15,
+"dowry":      0,
+"dowry_deaths":      0,
+"cruelty":     43,
+"assult":     49,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Meghalaya",
+"rape":    164,
+"kidnapping":     24,
+"insult":      0,
+"immoral":      7,
+"dowry":      0,
+"dowry_deaths":      1,
+"cruelty":     16,
+"assult":     43,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Mizoram",
+"rape":    103,
+"kidnapping":      3,
+"insult":      0,
+"immoral":      0,
+"dowry":      0,
+"dowry_deaths":      0,
+"cruelty":      8,
+"assult":     85,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Nagaland",
+"rape":     21,
+"kidnapping":     10,
+"insult":      0,
+"immoral":      4,
+"dowry":      0,
+"dowry_deaths":      0,
+"cruelty":      0,
+"assult":     16,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Orissa",
+"rape":   1458,
+"kidnapping":   1364,
+"insult":    304,
+"immoral":     24,
+"dowry":   1487,
+"dowry_deaths":    525,
+"cruelty":   2638,
+"assult":   4187,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Punjab",
+"rape":    680,
+"kidnapping":    689,
+"insult":     31,
+"immoral":     86,
+"dowry":      1,
+"dowry_deaths":    118,
+"cruelty":   1293,
+"assult":    340,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Rajasthan",
+"rape":   2049,
+"kidnapping":   2697,
+"insult":     18,
+"immoral":     99,
+"dowry":     39,
+"dowry_deaths":    478,
+"cruelty":  13312,
+"assult":   2352,
+"kmeansdata.cluster": 3 
+},
+{
+ "state": "Sikkim",
+"rape":     34,
+"kidnapping":     10,
+"insult":      0,
+"immoral":      0,
+"dowry":      0,
+"dowry_deaths":      1,
+"cruelty":      4,
+"assult":     19,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Tamil Nadu",
+"rape":    737,
+"kidnapping":   1693,
+"insult":    382,
+"immoral":    500,
+"dowry":    277,
+"dowry_deaths":    110,
+"cruelty":   1965,
+"assult":   1494,
+"kmeansdata.cluster": 2 
+},
+{
+ "state": "Tripura",
+"rape":    229,
+"kidnapping":    114,
+"insult":      7,
+"immoral":      0,
+"dowry":      0,
+"dowry_deaths":     37,
+"cruelty":    858,
+"assult":    314,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "Uttar Pradesh",
+"rape":   1963,
+"kidnapping":   7910,
+"insult":      8,
+"immoral":     31,
+"dowry":    505,
+"dowry_deaths":   2244,
+"cruelty":   7661,
+"assult":   3247,
+"kmeansdata.cluster": 1 
+},
+{
+ "state": "Uttarakhand",
+"rape":    148,
+"kidnapping":    256,
+"insult":     73,
+"immoral":     12,
+"dowry":      0,
+"dowry_deaths":     71,
+"cruelty":    368,
+"assult":    139,
+"kmeansdata.cluster": 4 
+},
+{
+ "state": "West Bengal",
+"rape":   2046,
+"kidnapping":   4168,
+"insult":    556,
+"immoral":    109,
+"dowry":    241,
+"dowry_deaths":    593,
+"cruelty":  19865,
+"assult":   3345,
+"kmeansdata.cluster": 3 
+} 
+],
+    xAxis = {
+ "type": "addCategoryAxis",
+"showPercent": false,
+"orderRule": "kmeansdata.cluster" 
+},
+    yAxis = {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+    zAxis = [],
+    colorAxis = [],
+    legend = [];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  //x axis
+  var x;
+  if(xAxis.measure) {
+    x = myChart[xAxis.type]("x",opts.x,xAxis.measure);
+  } else {
+    x = myChart[xAxis.type]("x", opts.x);
+  };
+  if(!(xAxis.type === "addPctAxis")) x.showPercent = xAxis.showPercent;
+  if (xAxis.orderRule) x.addOrderRule(xAxis.orderRule);
+  if (xAxis.grouporderRule) x.addGroupOrderRule(xAxis.grouporderRule);  
+  if (xAxis.overrideMin) x.overrideMin = xAxis.overrideMin;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.inputFormat) x.dateParseFormat = xAxis.inputFormat;
+  if (xAxis.outputFormat) x.tickFormat = xAxis.outputFormat;
+  //y axis
+  var y;
+  if(yAxis.measure) {
+    y = myChart[yAxis.type]("y",opts.y,yAxis.measure);
+  } else {
+    y = myChart[yAxis.type]("y", opts.y);
+  };
+  if(!(yAxis.type === "addPctAxis")) y.showPercent = yAxis.showPercent;
+  if (yAxis.orderRule) y.addOrderRule(yAxis.orderRule);
+  if (yAxis.grouporderRule) y.addGroupOrderRule(yAxis.grouporderRule);
+  if (yAxis.overrideMin) y.overrideMin = yAxis.overrideMin;
+  if (yAxis.overrideMax) y.overrideMax = yAxis.overrideMax;
+  if (yAxis.inputFormat) y.dateParseFormat = yAxis.inputFormat;
+  if (yAxis.outputFormat) y.tickFormat = yAxis.outputFormat;
+//z for bubbles
+    var z;
+  if (!(typeof(zAxis) === 'undefined') && zAxis.type){
+    if(zAxis.measure) {
+      z = myChart[zAxis.type]("z",opts.z,zAxis.measure);
+    } else {
+      z = myChart[zAxis.type]("z", opts.z);
+    };
+    if(!(zAxis.type === "addPctAxis")) z.showPercent = zAxis.showPercent;
+    if (zAxis.orderRule) z.addOrderRule(zAxis.orderRule);
+    if (zAxis.overrideMin) z.overrideMin = zAxis.overrideMin;
+    if (zAxis.overrideMax) z.overrideMax = zAxis.overrideMax;
+  }
+  if(d3.keys(colorAxis).length > 0) {
+    myChart[colorAxis.type](colorAxis.colorSeries,colorAxis.palette) ;
+  }
+  
+  //here need think I need to evaluate group and if missing do null
+  //as the first argument
+  //if provided need to use groups from opts
+  if(opts.hasOwnProperty("groups")) {
+    var s = myChart.addSeries( opts.groups, dimple.plot[opts.type] );
+    //series offers an aggregate method that we will also need to check if available
+    //options available are avg, count, max, min, sum
+    if (!(typeof(opts.aggregate) === 'undefined')) {
+      s.aggregate = eval(opts.aggregate);
+    }
+    if (!(typeof(opts.lineWeight) === 'undefined')) {
+      s.lineWeight = eval(opts.lineWeight);
+    }
+    if (!(typeof(opts.barGap) === 'undefined')) {
+      s.barGap = eval(opts.barGap);
+    }    
+  } else var s = myChart.addSeries( null, dimple.plot[opts.type] );
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(legend).forEach(function(d){
+      l[d] = legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+    
+  </body>
+</html>

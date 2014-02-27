@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GeoChartID1fdc34e7f0</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- GeoChart generated in R 3.0.2 by googleVis 0.4.7 package -->
+<!-- Mon Dec 16 18:05:57 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID1fdc34e7f0 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Andhra Pradesh",
+28150 
+],
+[
+ "Arunachal Pradesh",
+201 
+],
+[
+ "Assam",
+13539 
+],
+[
+ "Bihar",
+11220 
+],
+[
+ "Chhattisgarh",
+4227 
+],
+[
+ "Delhi",
+5959 
+],
+[
+ "Goa",
+200 
+],
+[
+ "Gujarat",
+9561 
+],
+[
+ "Haryana",
+6000 
+],
+[
+ "Himachal Pradesh",
+912 
+],
+[
+ "Jammu & Kashmir",
+3328 
+],
+[
+ "Jharkhand",
+4533 
+],
+[
+ "Karnataka",
+10334 
+],
+[
+ "Kerala",
+10927 
+],
+[
+ "Madhya Pradesh",
+16826 
+],
+[
+ "Maharashtra",
+16351 
+],
+[
+ "Manipur",
+304 
+],
+[
+ "Meghalaya",
+255 
+],
+[
+ "Mizoram",
+199 
+],
+[
+ "Nagaland",
+51 
+],
+[
+ "Orissa",
+11987 
+],
+[
+ "Punjab",
+3238 
+],
+[
+ "Rajasthan",
+21044 
+],
+[
+ "Sikkim",
+68 
+],
+[
+ "Tamil Nadu",
+7158 
+],
+[
+ "Tripura",
+1559 
+],
+[
+ "Uttar Pradesh",
+23569 
+],
+[
+ "Uttarakhand",
+1067 
+],
+[
+ "West Bengal",
+30923 
+] 
+];
+data.addColumn('string','state');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID1fdc34e7f0() {
+var data = gvisDataGeoChartID1fdc34e7f0();
+var options = {};
+options["width"] =    600;
+options["height"] =    600;
+options["title"] = "XXX";
+options["region"] = "IN";
+options["displayMode"] = "region";
+options["resolution"] = "provinces";
+options["colorAxis"] = {colors:['grey','yellow','green','blue','orange','red']};
+
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID1fdc34e7f0')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID1fdc34e7f0);
+})();
+function displayChartGeoChartID1fdc34e7f0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1fdc34e7f0"></script>
+ 
+<!-- divChart -->
+  
+<div id="GeoChartID1fdc34e7f0"
+  style="width: 600px; height: 600px;">
+</div>
+ <div><span>Data: subset(meltCom, meltCom$crimeType == "TotalCrimes" & meltCom$year ==  &#8226; Chart ID: <a href="Chart_GeoChartID1fdc34e7f0.html">GeoChartID1fdc34e7f0</a></span><br /> <div><span>Data:     2012 & meltCom$state != "TOTAL") &#8226; Chart ID: <a href="Chart_GeoChartID1fdc34e7f0.html">GeoChartID1fdc34e7f0</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.0.2 (2013-09-25) &#8226; <a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis-0.4.7</a>
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/geochart.html#Data_Policy">Data Policy</a>
+</span></div>
+</body>
+</html>

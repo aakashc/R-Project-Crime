@@ -1,0 +1,16 @@
+{
+    "contents" : "rm(list=ls())\nload('internship.rda')\nhead(data)\nindexes = sample(1:nrow(data), size=0.2*nrow(data))\ntest = data[indexes,]\ntrain = data[-indexes,]\nrow.names(test) <- NULL\nrow.names(train) <- NULL\n\nnames(train)\nmodel1 <- glm(predictingVar ~ age+sex+chestpain+restingBP+cholestrol+fastingBS+restingECG+maxHeartRate+exerciseInducedEngima+slope,data=train,family=\"binomial\")\nlibrary(MASS)\nmodel2 <- stepAIC(model1, direction='both')\nsummary(model2)\nlibrary(relaimpo)\ncalc.relimp(model2, type =\"last\")\nresiduals.glm(model2)\n\npar(mfrow=c(2,2))\nplot(model1)\n\nsummary(model1)\nconfint(model1)\nexp(coef(model1))\nexp(coef(model1))\nexp(cbind(OR = coef(model1), confint(model1)))\n\npredict_prob <- predict(model2, test, type='response')\npredict_prob <- round(predict_prob)\npredict_prob\nlibrary(caret)\nconfusionMatrix(predict_prob, test$predictingVar)\n",
+    "created" : 1385669689189.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "894688203",
+    "id" : "AB8D6B04",
+    "lastKnownWriteTime" : 13229740524830817,
+    "path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
